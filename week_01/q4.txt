@@ -1,4 +1,5 @@
 AS.410.698.81 SP13
 Shan Sabri
 
-The solution to question 4 goes here. 
+cp ~/my_project/html_sub_dir/*.html ~/public_html
+cp ~/my_project/cgi_sub_dir/*.cgi ~/public_html
