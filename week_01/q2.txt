@@ -1,4 +1,4 @@
 AS.410.698.81 SP13
 Shan Sabri
 
-I am currently typing this with the vi editor. I choose vi mainly because of its universality. From my understanding vi is on essentially every UNIX system. Not only is vi more common than emacs, it is also much faster and smaller. 
+I am currently typing this with the vi editor. I choose vi mainly because of its universality. From my understanding vi is on essentially every UNIX system. Not only is vi more common than emacs, it is also much faster and smaller. The commands seem simple to understand. I'm looking forward to learning more on vi :) 

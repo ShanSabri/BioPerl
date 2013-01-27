@@ -3,7 +3,7 @@ Shan Sabri
 
 mkdir -p /home/bp05/project/{bin,lib} 
 
-Directory Visualization:
+Directory Tree Visualization:
 
 	home --> bp05 --> project
 			    /\
