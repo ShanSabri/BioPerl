@@ -1,5 +1,8 @@
 AS.410.698.81 SP13
 Shan Sabri
 
+vi q4.sh
 cp ~/my_project/html/*.html ~/public_html
 cp ~/my_project/cgi/*.cgi ~/public_html
+sh q4.sh
+

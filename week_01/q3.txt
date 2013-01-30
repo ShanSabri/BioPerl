@@ -1,11 +1,13 @@
 AS.410.698.81 SP13
 Shan Sabri
 
+vi q3.sh
 mkdir -p /home/bp05/project/{bin,lib} 
+sh q3.sh
 
-Directory Tree Visualization:
-
-	home --> bp05 --> project
-			    /\
-			   /  \
-		    	bin   lib 
+# Directory Tree Visualization:
+#
+#	home --> bp05 --> project
+#			    /\
+#			   /  \
+#		    	bin   lib 
