@@ -1,0 +1,27 @@
+#  AS.410.698.81 SP13
+#  Shan Sabri
+
+#  Modify the script in the previous problem so that it 
+#  only copies files if the source file (the original) is 
+#  newer than the destination file (the copy). 
+#  (Hint: look at the options for the test command.) (10 pts)
+
+
+#! /bin/sh
+
+mkdir -p ./public_html/{html,cgi}
+
+for htmlfile in *.html ; do
+	if test $htmlfile -nt ./public_html/html/$htmlfile ; then 
+        	echo "Processing $htmlfile"
+        	cp $htmlfile ./public_html/html/$htmlfile
+	fi
+done
+
+
+for cgifile in *.cgi ; do
+	if test $cgifile -nt ./public_html/cgi/$cgifile ; then
+        	echo "Processing $cgifile"
+        	cp $cgifile ./public_html/cgi/$cgifile
+	fi
+done
