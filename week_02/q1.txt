@@ -1,0 +1,11 @@
+#  AS.410.698.81 SP13
+#  Shan Sabri
+
+#  Write a script that uses a loop to generate 
+#  a basic project directory tree
+
+
+for i in $(seq 1 3); do
+	mkdir directory_${i}
+	echo "Created directory named directory_$i"
+done
