@@ -1,0 +1,19 @@
+#! /usr/bin/perl
+
+use strict;
+use warnings;
+
+print "Please enter an integer to determine size of matrix: ";
+my $input = <STDIN>;
+
+print mult_table($input);
+
+sub mult_table{
+	for ( my $i = 1 ; $i <= $input ; $i++ ){
+		for ( my $j = 1 ; $j <= $input ; $j++ ){
+			my $results = $i * $j;
+			print "$results ";
+		}
+		print "\n";
+	}
+}
