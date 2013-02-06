@@ -11,11 +11,12 @@
 
 #! /bin/sh
 
-export COPY_ALL
 
-case $COPY_ALL in
-#First case - Copy All
-	1 ) 
+# First case - Copy All if COPY_ALL is unset
+# Second case - Update only if COPY_ALL is 1
+
+
+if [ -z "$COPY_ALL" ]; then 
 	  #Hardcode
 	  mkdir -p ./public_html/{html,cgi}
 
@@ -30,10 +31,7 @@ case $COPY_ALL in
 	  done
 
 	  #OR SIMPLY 'exec ./q2.sh'
-	  ;;
-
-#Second case - Update Only
-	* ) 
+elif [ "COPY_ALL"=1 ]; then 
 	  #Hardcode
 	  mkdir -p ./public_html/{html,cgi}
 
@@ -52,8 +50,5 @@ case $COPY_ALL in
 	  done
 
 	  #OR simply 'exec ./q3.sh'
-	  ;;
-esac
-
-unset COPY_ALL
+fi
 
