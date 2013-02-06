@@ -1,0 +1,16 @@
+#! /usr/bin/perl
+
+use strict;
+use warnings;
+
+my $i;
+my $j;
+my $results;
+
+for ( $i = 0 ; $i <= 12 ; $i++ ){
+	for ( $j = 0 ; $j <= 12 ; $j++ ){
+		$results = $i * $j;
+		print "$results ";
+	}
+	print "\n";
+}
