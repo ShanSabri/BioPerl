@@ -1,0 +1,14 @@
+#! /usr/bin/perl
+
+use strict;
+use warnings;
+
+print "Length of DNA Sequence: ";
+my $length = <STDIN>;
+my $randLength = 1 + rand($length);
+
+my @nuc = ( 'A' , 'T' , 'C' , 'G' );
+my $DNA;
+$DNA .= $nuc[rand @nuc] for 1..$randLength;
+print "Random DNA Sequence: \n $DNA \n";
+
