@@ -1,0 +1,35 @@
+#! /usr/bin/perl 
+
+use strict;
+use warnings;
+
+my @nuc = ( 'A' , 'T' , 'C' , 'G' );
+
+   # Each loop is corresponds to a random sequence AND file
+
+for ( my $i = 0 ; $i < 10 ; $i++ ){
+
+   # The code below will generate a random sequence based on the array 
+   # above of a random length less than 50bp 
+
+	my $DNA;	
+	my $randLength = int(rand(49)+1);
+	$DNA .= $nuc[rand @nuc] for 1..$randLength;
+	#print "Sequence $i: \n $DNA \n\n";
+	open (FILE , "+>" , $i) || die "Could not open file $i";
+	print FILE "$DNA";
+
+   # The code below will check for repetitive subsequences within 
+   # the random DNA sequence, then it will print the file name.
+   # These if statments will also determind if no repitition is found.
+
+	if ($DNA =~ m/AAAA/){print "A run found in $i\n";}
+	if ($DNA =~ m/TTTT/){print "T run found in $i\n";}
+	if ($DNA =~ m/CCCC/){print "C run found in $i\n";}
+	if ($DNA =~ m/GGGG/){print "G run found in $i\n";}
+	else{print "No repetition found in $i\n";}
+   
+   # Close the files	
+
+	close (FILE);	
+}
