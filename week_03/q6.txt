@@ -1,0 +1,22 @@
+#! /usr/bin/perl
+
+use strict;
+use warnings;
+
+print "Enter regexp: ";
+my $regexp = <STDIN>;
+print "Enter string or 'exit' to exit: ";
+my $string = <STDIN>;
+
+if ($string eq "exit"){print "Bye Bye! \n"; exit 0;}
+
+while ($string -~ m/regexp/g){
+	print '$&'. Next attempt at character '. pos($string)+1 .' ";
+}
+
+#if ($string =~ /$regexp/){
+#	print "Match!\n";
+#}else{
+#	print "No Match!\n";
+#}
+

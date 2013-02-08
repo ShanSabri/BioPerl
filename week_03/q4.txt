@@ -1,14 +1,36 @@
 #! /usr/bin/perl
 
-use strict;
 use warnings;
+use strict;
+
+sub random ($;$) {
+	my $result;
+	my $randDNA;
+	my $randDNA_length;
+	my ($length, $randomLength) = @_;
+	my @nuc = ( 'A' , 'T' , 'C' , 'G' );
+
+	if ($randomLength =~ /^[Y]$/i){
+		$randDNA_length .= $nuc[rand @nuc] for 1..(1+rand($length));
+		print "Random DNA Seq of random length (1-$length):
+			\n $randDNA_length \n";
+	}elsif($randomLength =~ /^[N]$/i){
+		$randDNA .= $nuc[rand @nuc] for 1..$length;
+		print "Random DNA Seq of length $length:
+			\n $randDNA \n";
+	}else{
+		print "You need to specify if you want to randomize the length\n";
+	}
+}
+
+my $length;
+my $randomLength;
 
 print "Length of DNA Sequence: ";
-my $length = <STDIN>;
-my $randLength = 1 + rand($length);
+$length = <STDIN>;
 
-my @nuc = ( 'A' , 'T' , 'C' , 'G' );
-my $DNA;
-$DNA .= $nuc[rand @nuc] for 1..$randLength;
-print "Random DNA Sequence: \n $DNA \n";
+print "Do you want to randomize this length (Y | N): ";
+$randomLength = <STDIN>;
+ 
+random ($length, $randomLength);
 
