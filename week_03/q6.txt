@@ -3,20 +3,36 @@
 use strict;
 use warnings;
 
-print "Enter regexp: ";
-my $regexp = <STDIN>;
-print "Enter string or 'exit' to exit: ";
-my $string = <STDIN>;
+sub RegularExp($$){
+    #Place 1st arg from @_ and assign it in $userReg
+	my $userReg = shift;
+    #Place 2nd arg from @_ and assign to $userString
+	my $userString = shift;
 
-if ($string eq "exit"){print "Bye Bye! \n"; exit 0;}
+    #If user wants to exit
+	if($userString =~ /EXIT/i){
+		print "Bye Bye!\n";
+		exit 0;
+	}
 
-while ($string -~ m/regexp/g){
-	print '$&'. Next attempt at character '. pos($string)+1 .' ";
+    #Check userReg against userString	
+	if($userString =~ m/($userReg)/i){
+		print "Match! with ";
+	}else{
+		print "No Match!";
+	}
+   
+    #If there was a match, print what the match was
+	if(defined($1)){
+		print $1;
+	}
 }
+ 
+print "Enter Regular Expression: ";
+my $userReg = <STDIN>;
 
-#if ($string =~ /$regexp/){
-#	print "Match!\n";
-#}else{
-#	print "No Match!\n";
-#}
+print "Enter String or 'EXIT' to EXIT: ";
+my $userString = <STDIN>;
+
+RegularExp ($userReg, $userString);
 
