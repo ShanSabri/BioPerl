@@ -27,7 +27,7 @@ for ( my $i = 0 ; $i < 10 ; $i++ ){
 	if ($DNA =~ m/TTTT/){print "T run found in $i\n";}
 	if ($DNA =~ m/CCCC/){print "C run found in $i\n";}
 	if ($DNA =~ m/GGGG/){print "G run found in $i\n";}
-	else{print "No repetition found in $i\n";}
+	#else{print "No repetition found in $i\n";}
    
    # Close the files	
 
