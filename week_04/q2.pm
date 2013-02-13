@@ -7,7 +7,7 @@ use Exporter 'import';
 our @EXPORT_OK = ( "randLength" );
   
 my @bases = qw/ A C G T /;
-my $length = 50;
+my $length;
   
 sub randLength {
     	my( $length , $random_length ) = @_;
