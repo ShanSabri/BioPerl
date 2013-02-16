@@ -1,16 +1,19 @@
-#! /opt/perl/bin/perl
+#! /usr/bin/perl
 
+use Test::Simple tests => 1;
 use strict;
 use warnings;
+use q2;
 
-#Run 2 tests, one for each argument. 
-use Test::Simple tests => 1;
+my $length = 10;
+my $random_length = 1;
+my $oneArg = randLength($length);
+my $twoArg = randLength($length, $random_length);
 
-use q2 'randLength';
+print "One argument sequence = $oneArg\n";
+print "Two argument sequence = $twoArg\n";
 
-my $length = 50;
-my $dna = randLength(50);
-#my $random_length = 1;
-
-#ok ( length($dna)  == 50 , "string length checks" );
-ok ( $dna =~ /^[ACGT]{$length}$/i , "string composition checks" );
+ok (length($oneArg) == $length , "String length checks for one arg");
+ok (length($twoArg) <= $length , "String length checks for two arg");
+ok ($oneArg =~ /^[ACGT]{$length}$/i , "String composition checks for one arg");
+ok ($twoArg =~ /^[ACGT]/i , "String composition checks for two arg");

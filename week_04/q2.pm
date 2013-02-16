@@ -1,25 +1,28 @@
 package q2;
 
 use strict;
-use warnings;
+use base 'Exporter';
 
-use Exporter 'import';
-our @EXPORT_OK = ( "randLength" );
-  
+our @EXPORT = qw(randLength);
+
 my @bases = qw/ A C G T /;
-my $length;
-  
+my @dna;
+
 sub randLength {
-    	my( $length , $random_length ) = @_;
-  
+  	@dna = ('');
+	my $length = shift;
+	my $random_length = shift;
+	
 	if ( $random_length ) {
-		$length = int( rand( $length ));
+                $length = int( rand( $length ));
+        }
+
+	foreach (1 .. $length){
+  		push (@dna, $bases[int(rand(4))]);
 	}
-  
-	foreach ( 1 .. $length ) {
-		print $bases[int(rand(4))];
-	}
-	print "\n";
+
+	my $dna = join "", @dna;
+	return $dna;
 }
 
 1;
