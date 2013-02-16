@@ -1,6 +1,6 @@
 #! /usr/bin/perl
 
-use Test::Simple tests => 1;
+use Test::Simple tests => 4;
 use strict;
 use warnings;
 use q2;
