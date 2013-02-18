@@ -3,9 +3,9 @@
 use Test::Simple tests => 4;
 use strict;
 use warnings;
-use q2;
+use q3;
 
-my $length = 10;
+my $length = 50;
 my $random_length = 1;
 my $oneArg = randLength($length);
 my $twoArg = randLength($length, $random_length);
