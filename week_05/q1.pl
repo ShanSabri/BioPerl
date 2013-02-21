@@ -9,27 +9,17 @@ my @array2=([2, 4, 6]);
 multiplyArray(@array1, @array2);
 
 sub multiplyArray{
-	our @a = shift;
-	our @b = shift;
-	
-	my $p = [];
-	my $rows = @a;
-	my $cols = @{$b[0]};
-	my $n = @b - 1;
-	
-	for (my $i = 0 ; $i < $rows ; ++$i){
-		for (my $j = 0 ; $j < $cols ; ++$j){
-			$$p[$i][$j] += $a[$i][$_] * $b[$_][$j] foreach 0 .. $n;
-			#$$p[$i][$j] += $a[$_][$j] * $b[$i][$_] foreach 0 .. $n;
+	my ($array1, $array2) = @_;
+	my @result;
+
+	foreach my $array1_i (@$array1){
+		my @row;
+		foreach my $array2_j (@$array2){
+			push @row, $array1_i * $array2_j;
 		}
-	}
-	print "Reference to array product: $p \n";
+		push @result, \@row;
+    	}
+	print "Reference to array product: ", \@result, "\n";
 	print "Dereferenced array product: \n";
-	print "@$_\n" foreach @{$p};		
+	print "@$_\n" foreach @result;
 }
-
-# expected output:
-#  2  4  6
-#  4  8  12
-#  6  12 18
-
