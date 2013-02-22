@@ -1,0 +1,76 @@
+**Basis**
++-------------------------------------------------------------------+
+|   			ENTITY #1 ORGANISM			    |
++-----------------+------------------+------------------------------+
+|   FIELD NAME    |    DATATYPE      |           NOTES              |
++-----------------+------------------+------------------------------+
+| Organism ID     |   INT	     | TaxonID		            |
+|                 |                  |			            |
+|                 |                  |                              |
++-----------------+------------------+------------------------------+
+| Organism Name   |   VARCHAR	     | Genus/species	            |
+|                 |                  | Perhaps even str.            |
+|                 |                  |                              |
++-----------------+------------------+------------------------------+
+| Genome Assembly |   VARCHAR	     | Assembly ID                  |
+|                 |                  | GenBank or Refseq            |
+|                 |                  |                              |
++-----------------+------------------+------------------------------+
+
+**An organism has multiple genes**
++-------------------------------------------------------------------+
+|                       ENTITY #2   GENE                            |
++-----------------+------------------+------------------------------+
+|   FIELD NAME    |    DATATYPE      |           NOTES              |
++-----------------+------------------+------------------------------+
+| Gene ID         |   VARCHAR	     | Gene ID                      |
+|                 |                  |                              |
+|                 |                  |                              |
++-----------------+------------------+------------------------------+
+| Gene Name       |   VARCHAR	     | Gene Symbol                  |
+|                 |                  |                              |
+|                 |                  |                              |
++-----------------+------------------+------------------------------+
+| Gene Type       |   VARCHAR        | Protein coding,              |
+|                 |                  | Pseudo, etc                  |
+|                 |                  |                              |
++-----------------+------------------+------------------------------+
+| Gene Map        |   VARCHAR	     | Chromosomal location         |
+|                 |                  |                              |
+|                 |                  |                              |
++-----------------+------------------+------------------------------+
+| Gene size       |   INT	     | Length of gene               |
+|                 |                  | 		                    |
+|                 |                  |                              |
++-----------------+------------------+------------------------------+
+| Gene ORF Start  |   INT/VARCHAR    | Position of start            |
+|                 |                  | Stored as nuc position       |
+|                 |                  |  OR stored as codon          |
++-----------------+------------------+------------------------------+
+| Gene ORF Stop   |   INT/VARCHAR    | Position of stop             |
+|                 |                  | Stored as nuc position       |
+|                 |                  |  OR stored as codon          |
++-----------------+------------------+------------------------------+
+| Gene Sequence   |   TEXT           | Sequence of Gene             |
+|                 |                  |                              |
+|                 |                  |                              |
++-----------------+------------------+------------------------------+
+
+**A gene can affect multiple tissues within an organism**
+Ex.: Human Renin gene is known to affect the intestine; kidney; 
+placenta; skin; embryonic tissue; bladder; pancreas; testis; ovary;
+Ref: via UniGene DB
++-------------------------------------------------------------------+
+|                       ENTITY #3 TISSUE                            |
++-----------------+------------------+------------------------------+
+|   FIELD NAME    |    DATATYPE      |           NOTES              |
++-----------------+------------------+------------------------------+
+| Tissue Type     |   VARCHAR	     | Brain, Liver, etc.           |
+|                 |                  |                              |
+|                 |                  |                              |
++-----------------+------------------+------------------------------+
+| Expression Lvl  |   INT            | Gene Expression Level        |
+|                 |                  | within specific tissue       |
+|                 |                  |                              |
++-----------------+------------------+------------------------------+
+
