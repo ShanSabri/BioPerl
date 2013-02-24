@@ -14,7 +14,7 @@ while( my ($key, $value) = each %{$dataref}){
 		my @count = ($value =~ /$base{4}/);
 		if(@count){
 			print "Run ", $base x 4, " found ",
-			 scalar @count, " times in $key\n";
+			scalar @count, " times in $key\n";
 		}
 	}
 }
