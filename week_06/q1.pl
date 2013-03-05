@@ -7,20 +7,20 @@ $dbFile = "q1.db" unless defined $dbFile;
 $inFile = "sample-data.txt" unless defined $inFile;
 
 open my $file, '<', $inFile or die "Could not open file: $inFile";
-print "Reading input file: $inFile\n";
-my $entries = read_from_file($file);
+print "Reading data from $inFile\n";
+my $entries = read_file($file);
 close $file;
  
-print "Creating database: $dbFile\n";
+print "Creating database named $dbFile\n";
 my $dbh = DBI->connect( "dbi:SQLite:dbname=$dbFile", "", "" );
  
-print "Creating tables\n";
-create_tables($dbh);
+print "Making tables\n";
+make_tables($dbh);
  
-print "Inserting ", scalar @$entries, " sequences into $dbFile\n";
-insert_into_db( $entries, $dbh );
+print "Placing ", scalar @$entries, " sequences into $dbFile\n";
+put_into_db( $entries, $dbh );
  
-sub insert_into_db {
+sub put_into_db {
 	my ($entries, $dbh) = @_;
 	foreach my $entry ( @{$entries} ) {
 		my $sth = $dbh->prepare("INSERT INTO Gene VALUES (?, ?, ?, ?, ? ,?)");
@@ -33,40 +33,40 @@ sub insert_into_db {
 	}
 }
  
-sub create_tables {
+sub make_tables {
 	my ($dbh) = @_;
 	$dbh->do("CREATE TABLE IF NOT EXISTS Gene(
-		name TEXT PRIMARY KEY,
-		organism TEXT,
-		tissue TEXT,
-		start INTEGER,
-		stop INTEGER,
-		expression INTEGER)"
+		name 	   TEXT    NOT NULL PRIMARY KEY,
+		organism   TEXT    NOT NULL,
+		tissue 	   TEXT    NOT NULL,
+		start 	   INTEGER NOT NULL,
+		stop 	   INTEGER NOT NULL,
+		expression INTEGER NOT NULL)"
 	);
  
 	$dbh->do("CREATE TABLE IF NOT EXISTS Sequence(
-		gene_name TEXT,
-		sequence TEXT,
+		gene_name  TEXT NOT NULL,
+		sequence   TEXT NOT NULL,
 		PRIMARY KEY(gene_name, sequence))"
 	);
 }
  
-sub read_from_file {
+sub read_file {
 	my ($fh) = @_;
 	my @results;
 	local $/ = "\n>";
-	while ( my $record = <$file> ) {
-		chomp($record);
-		$record =~ s/^>//;
-	        my ( $header, $sequences ) = split( /\n/, $record, 2 );
+	while ( my $read = <$file> ) {
+		chomp($read);
+		$read =~ s/^>//;
+	        my ( $head, $sequences ) = split( /\n/, $read, 2 );
  		#Parse using an array of string indicies
 		my %entry;
-		@entry{qw/name organism tissue start stop expression/} = split /\|/, $header;
+		@entry{qw/name organism tissue start stop expression/} = split /\|/, $head;
 		$entry{sequences} = [];
 
 		foreach my $sequence ( split "\n", $sequences ) {
-			$sequence =~ s/^\s*//;    #Remove leading whitespace
-			next if $sequence =~ /^;/;    #Skip comment lines
+			$sequence =~ s/^\s*//;    
+			next if $sequence =~ /^;/;
 			push @{ $entry{sequences} }, $sequence;
 		}
  		push @results, \%entry;
