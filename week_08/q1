@@ -1,0 +1,7 @@
+cd bin
+
+for file in *
+ do
+	mv "${file}" ../lib/"${file}"
+	echo "Moved ${file} to ~/week_08/lib"
+done
