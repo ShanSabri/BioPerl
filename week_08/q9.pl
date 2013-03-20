@@ -1,27 +1,26 @@
 #!/opt/perl/bin/perl
 
-use Test::Simple tests => 5;
+use Test::Simple tests => 6;
 use strict;
 use warnings;
 use q8;
 
 my $seq = 'GATATGGCTTCATAAAGCCGAA';
-# my $bad_seq = 'GATATGGCTZTCATAAAGYCCGAA'; 
+my $bad_seq = 'GATATGGCTZTCATAAAGYCCGAA'; 
 
-my $test_frame1 = translate_dna(frame($seq, 1));                   #Output: MAS*   (start, stop)
-my $test_frame2 = translate_dna(frame($seq, 2));                   #Output:        (no start, no stop)
-my $test_frame1_revcomp = translate_dna(frame(rev_comp($seq), 1)); #Output: MKPY   (start, no stop)
-my $test_frame2_revcomp = translate_dna(frame(rev_comp($seq), 2)); #Output:	   (no start, stop)
+my $test_frame1 = translate_dna(frame($seq, 1));		   #Output: MAS* 	 (start, stop)
+my $test_frame2 = translate_dna(frame($seq, 2)); 		   #Output:		 (no start, no stop)
+my $test_bad_seq = translate_dna(frame($bad_seq, 1)); 		   #Output: Invalid
+my $test_frame1_revcomp = translate_dna(frame(rev_comp($seq), 1)); #Output: MKPY 	 (start, no stop)
+my $test_frame2_revcomp = translate_dna(frame(rev_comp($seq), 2)); #Output:		 (no start, stop)
 
 ok ($test_frame1 =~ /^[MWFYCQSLNEKHDRISPLVTRGA\*]/i , "Amino acid composition checks for DNA sequence");
 ok ($test_frame1 =~ /^[M].*[\*]$/i, "Frame 1 of sequence contains a Start AND STOP codon"); 
 ok (($test_frame1_revcomp =~ /^[M]/i) && ($test_frame1_revcomp !~ /[\*]$/), 
 			"Frame 1 of sequence revcomp contains a Start and no STOP codon"); 
-ok ($test_frame2 eq "", "Frame 2 of sequence contains no protein tranlation");
-ok ($test_frame2_revcomp eq "", "Frame 2 of sequence revcomp contains no protein tranlation");
-
-# Module will die here because of non-nucs found in bad_seq
-# my $test_bad_seq = translate_dna(frame($bad_seq, 1));
+ok ($test_frame2 eq "", "Frame 2 of sequence contains no protein translation");
+ok ($test_frame2_revcomp eq "", "Frame 2 of sequence revcomp contains no protein translation");
+ok ($test_bad_seq eq "Invalid\n", "Found invalid codon in Bad DNA\n");
 
 exit;
 

@@ -48,24 +48,27 @@ sub translate_dna {
 	}
 	
 	
+	if ($protein =~ /^[MWFYCQSLNEKHDRISPLVTRGA\*]/i){ 
+		my $start = index($protein, 'M');
+		my $stop = index($protein, '*');
+		my $start_to_end;
 	
-	my $start = index($protein, 'M');
-	my $stop = index($protein, '*');
-	my $start_to_end;
+		if($start != -1 && $stop != -1){
+			$start_to_end = substr($protein, $start, $stop);
+			return $start_to_end;
+		}
 	
-	if($start != -1 && $stop != -1){
-		$start_to_end = substr($protein, $start, $stop);
-		return $start_to_end;
-	}
-	
-	if($start != -1 && $stop == -1){
-		$start_to_end = substr($protein, $start, length($protein));
-		return $start_to_end;
-	}
-	
-	if(($start == -1 && $stop == -1) || 
-		$start == -1 && $stop != -1){
-		return "";
+		if($start != -1 && $stop == -1){
+			$start_to_end = substr($protein, $start, length($protein));
+			return $start_to_end;
+		}
+		
+		if(($start == -1 && $stop == -1) || 
+			$start == -1 && $stop != -1){
+			return "";
+		}
+	}else{
+		return "Invalid\n";
 	}
 }
 
@@ -81,9 +84,9 @@ sub frame {
 	if (!grep(/[B|D|E|F|H|I|J|K|L|M|N|O|P|Q|R|S|U|V|W|X|Y|Z]/i, $dna)){
 		my $frame = substr($dna, $shift - 1);
 		return $frame;
-	}else{
-		die ("Can't handle characters other than: A  T  C  G\n");
-	}
+	}#else{
+	 #	die ("Can't handle characters other than: A  T  C  G\n");
+	 #}
 }
 
 1;
