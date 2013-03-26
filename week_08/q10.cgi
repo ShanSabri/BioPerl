@@ -1,4 +1,4 @@
-#!/opt/perl/bin/perl --
+#! /opt/perl/bin/perl --
  
 use strict;
 use warnings;
@@ -50,10 +50,10 @@ sub get_results {
                   AND goe.id = go.id
                   AND t.id = goe.tissue_id";
 	
-	$search .= " AND g.name = '$gene' " if $gene ne ""; 
-	$search .= " AND o.name = '$organism' " if $organism ne "";
-	$search .= " AND t.name = '$tissue' " if $tissue ne "";
-	$search .= " AND goe.expression_level == '$exp' " if $exp ne "";
+	$search .= " AND g.name = '$gene' " if $gene; 
+	$search .= " AND o.name = '$organism' " if $organism;
+	$search .= " AND t.name = '$tissue' " if $tissue;
+	$search .= " AND goe.expression_level == '$exp' " if $exp;
 	
 	if(!$gene && !$organism && !$tissue && !$exp){
         	$search = "";
