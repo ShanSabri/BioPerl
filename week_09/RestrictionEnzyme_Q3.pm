@@ -19,7 +19,7 @@ sub cut_dna{
 		" with a recognition sequence of " . $self->{_recognition_sequence} . "\n";
 	print "Using DNA: $dna\n";
 	my %frags = ();
-    if($enzyme_seq =~ m{([^']*)'([^/]*)}) {
+	if($enzyme_seq =~ m{([^'])'([^/])}) {
 		%frags = (
 			'pre' => $1, 
 			'post' => $2); 
