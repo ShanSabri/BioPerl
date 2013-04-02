@@ -4,25 +4,28 @@ package RestrictionEnzyme_Q3;
 sub new {
 	my( $class , %attribs ) = ( @_ );
 	my $self = {
-		_name => $attribs{name} || 'unknown',
-		_manufacturer  => $attribs{manufacturer} || 'unknown',
-		_recognition_sequence  => $attribs{recognition_sequence} || die("need 'recognition_sequence'!")
+		name => $attribs{name} || 'unknown',
+		manufacturer  => $attribs{manufacturer} || 'unknown',
+		recognition_sequence  => $attribs{recognition_sequence} || die("need 'recognition_sequence'!")
 	};
 	return bless $self , $class;
 }
 
 # METHOD
 sub cut_dna{
-	my( $self , $dna ) = @_;
-	my $enzyme_seq = $self->{_recognition_sequence}; 
-	print "Using " . $self->{_name} . " from " . $self->{_manufacturer} .
-		" with a recognition sequence of " . $self->{_recognition_sequence} . "\n";
+	my $self = shift;
+	my $dna = shift;
+	my $enzyme_seq = $self->{recognition_sequence};
+	
+	print "Using " . $self->{name} . " from " . $self->{manufacturer} .
+		" with a recognition sequence of " . $self->{recognition_sequence} . "\n";
 	print "Using DNA: $dna\n";
 	my %frags = ();
 	if($enzyme_seq =~ m{([^'])'([^/])}) {
-		%frags = (
+		 %frags = (
 			'pre' => $1, 
-			'post' => $2); 
+			'post' => $2
+			); 
 		my $pre = $frags{'pre'};
 		my $post = $frags{'post'};
 		while(1){
@@ -53,7 +56,7 @@ sub DESTROY {
 1;
 
 #####################################
-######   POD documentations    ######
+###### Q2 - POD documentations ######
 #####################################
 
 =head1 SYNOPSIS

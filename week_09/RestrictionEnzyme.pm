@@ -1,4 +1,5 @@
 package RestrictionEnzyme;
+
 use Moose;
 
 has 'name' => (isa => 'Str', is => 'rw');
@@ -10,11 +11,12 @@ sub cut_dna{
 	my $self = shift;
 	my $dna = shift;
 	my $enzyme_seq = $self->recognition_sequence;
+	
 	print "Using " . $self->name . " from " . $self->manufacturer .
 		" with a recognition sequence of " . $self->recognition_sequence . "\n";
 	print "Using DNA: $dna\n";
 	my %frags = ();
-    if($enzyme_seq =~ m{([^'])'([^/])}) {
+	if($enzyme_seq =~ m{([^'])'([^/])}) {
 		 %frags = (
 			'pre' => $1, 
 			'post' => $2
