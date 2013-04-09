@@ -7,8 +7,6 @@ use Bio::Seq;
 
 print "Input File (dna.fasta or protein.fasta): ";
 chomp (my $file = <STDIN>);
-# my $file = 'protein.fasta'; 
-
 
 my @bio_seq_objects = read_all_sequences( $file , 'fasta' );
 
@@ -24,8 +22,7 @@ if (keys %seqInfo) {
 	print "\t$_\n" for (keys %seqInfo); 
 	print "\nWhich gene(s) would you like to BLAST (ex: Gene1 Gene2 Gene3): \n"; 
 	my @userinput = split(/\s+/, <>); 
-	# my @userinput = qw[Nos2];
-	
+		
 	my $i = 1;
 	foreach my $arg (@userinput){
 		if ($arg = $seqInfo{$arg}) {
@@ -47,6 +44,6 @@ if (keys %seqInfo) {
 				write_blast( ">".$key."_Blast_Results" , $blast );
 				print "File: ".$key."_Blast_Results successfully created\n";
 			}
-		}else{print "ERR: Did not find Gene$i in $file!\n";$i++;}
+		}else{print "ERR: Did not find gene in input position $i in $file!\n"; $i++;}
 	}
 }else{print "ERR: No Genes found in $file!\n";}
