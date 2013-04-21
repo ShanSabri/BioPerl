@@ -43,7 +43,6 @@ sub get_results {
                 push (@count, $gq->get_count);
         }
 
-        my @results = map {($_ , shift @count)} @db;
+        @results = map {($_ , shift @count)} @db;
         return @results;
 }
-
