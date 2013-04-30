@@ -24,6 +24,8 @@ use Bio::SearchIO;
 use Bio::DB::GenBank;
 use Bio::Tools::Run::RemoteBlast;
 
+STDOUT->autoflush(1);
+
 if ($#ARGV != 1 ) {
 	print "USAGE:\n" . 
 			"\t ./q6.pl <accession_number> <e-value_cutoff>\n" . 
