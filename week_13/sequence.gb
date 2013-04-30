@@ -1,0 +1,205 @@
+LOCUS       NM_001204698            1320 bp    mRNA    linear   PRI 17-APR-2013
+DEFINITION  Homo sapiens Tax1 (human T-cell leukemia virus type I) binding
+            protein 3 (TAX1BP3), transcript variant 2, mRNA.
+ACCESSION   NM_001204698
+VERSION     NM_001204698.1  GI:325296953
+KEYWORDS    .
+SOURCE      Homo sapiens (human)
+  ORGANISM  Homo sapiens
+            Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi;
+            Mammalia; Eutheria; Euarchontoglires; Primates; Haplorrhini;
+            Catarrhini; Hominidae; Homo.
+REFERENCE   1  (bases 1 to 1320)
+  AUTHORS   Banerjee,M., Zoetewey,D.L., Ovee,M., Mazumder,S., Petrenko,V.A.,
+            Samoylova,T.I. and Mohanty,S.
+  TITLE     Specificity and promiscuity in human glutaminase interacting
+            protein recognition: insight from the binding of the internal and
+            C-terminal motif
+  JOURNAL   Biochemistry 51 (35), 6950-6960 (2012)
+   PUBMED   22876914
+  REMARK    GeneRIF: The study reports the identification of 18 new
+            glutaminase-interacting protein - binding peptides with novel
+            internal motifs that map to a number of candidate human
+            glutaminase-interacting protein partner proteins.
+REFERENCE   2  (bases 1 to 1320)
+  AUTHORS   Han,M., Wang,H., Zhang,H.T. and Han,Z.
+  TITLE     The PDZ protein TIP-1 facilitates cell migration and pulmonary
+            metastasis of human invasive breast cancer cells in athymic mice
+  JOURNAL   Biochem. Biophys. Res. Commun. 422 (1), 139-145 (2012)
+   PUBMED   22564736
+  REMARK    GeneRIF: this study revealed a novel oncogenic function of TIP-1
+            suggesting that TIP-1 holds potential as a prognostic biomarker and
+            a therapeutic target in the treatment of human invasive breast
+            cancers.
+REFERENCE   3  (bases 1 to 1320)
+  AUTHORS   Han,M., Wang,H., Zhang,H.T. and Han,Z.
+  TITLE     Expression of TIP-1 confers radioresistance of malignant glioma
+            cells
+  JOURNAL   PLoS ONE 7 (9), E45402 (2012)
+   PUBMED   23028987
+  REMARK    GeneRIF: The study provided the first evidence showing that TIP-1
+            modulates p53 protein stability and is involved in the
+            radioresistance of malignant gliomas.
+REFERENCE   4  (bases 1 to 1320)
+  AUTHORS   Zencir,S., Ovee,M., Dobson,M.J., Banerjee,M., Topcu,Z. and
+            Mohanty,S.
+  TITLE     Identification of brain-specific angiogenesis inhibitor 2 as an
+            interaction partner of glutaminase interacting protein
+  JOURNAL   Biochem. Biophys. Res. Commun. 411 (4), 792-797 (2011)
+   PUBMED   21787750
+  REMARK    GeneRIF: This is the first study reporting BAI2 as an interaction
+            partner of GIP.
+REFERENCE   5  (bases 1 to 1320)
+  AUTHORS   Oliver,A.W., He,X., Borthwick,K., Donne,A.J., Hampson,L. and
+            Hampson,I.N.
+  TITLE     The HPV16 E6 binding protein Tip-1 interacts with ARHGEF16, which
+            activates Cdc42
+  JOURNAL   Br. J. Cancer 104 (2), 324-331 (2011)
+   PUBMED   21139582
+  REMARK    GeneRIF: HPV16 E6, Tip-1 and ARHGEF16 may cooperate to activate
+            Cdc42 and support a potential link between the expression of HPV16
+            E6 and Cdc42 activation.
+REFERENCE   6  (bases 1 to 1320)
+  AUTHORS   Kanamori,M., Sandy,P., Marzinotto,S., Benetti,R., Kai,C.,
+            Hayashizaki,Y., Schneider,C. and Suzuki,H.
+  TITLE     The PDZ protein tax-interacting protein-1 inhibits beta-catenin
+            transcriptional activity and growth of colorectal cancer cells
+  JOURNAL   J. Biol. Chem. 278 (40), 38758-38764 (2003)
+   PUBMED   12874278
+  REMARK    GeneRIF: TIP-1 may represent a novel regulatory element in the
+            Wnt/beta-catenin signaling pathway
+REFERENCE   7  (bases 1 to 1320)
+  AUTHORS   Olalla,L., Aledo,J.C., Bannenberg,G. and Marquez,J.
+  TITLE     The C-terminus of human glutaminase L mediates association with PDZ
+            domain-containing proteins
+  JOURNAL   FEBS Lett. 488 (3), 116-122 (2001)
+   PUBMED   11163757
+  REMARK    Erratum:[FEBS Lett 2002 Nov 20;531(3):570]
+REFERENCE   8  (bases 1 to 1320)
+  AUTHORS   Reynaud,C., Fabre,S. and Jalinot,P.
+  TITLE     The PDZ protein TIP-1 interacts with the Rho effector rhotekin and
+            is involved in Rho signaling to the serum response element
+  JOURNAL   J. Biol. Chem. 275 (43), 33962-33968 (2000)
+   PUBMED   10940294
+REFERENCE   9  (bases 1 to 1320)
+  AUTHORS   Touchman,J.W., Anikster,Y., Dietrich,N.L., Maduro,V.V.,
+            McDowell,G., Shotelersuk,V., Bouffard,G.G.,
+            Beckstrom-Sternberg,S.M., Gahl,W.A. and Green,E.D.
+  TITLE     The genomic region encompassing the nephropathic cystinosis gene
+            (CTNS): complete sequencing of a 200-kb segment and discovery of a
+            novel gene within the common cystinosis-causing deletion
+  JOURNAL   Genome Res. 10 (2), 165-173 (2000)
+   PUBMED   10673275
+REFERENCE   10 (bases 1 to 1320)
+  AUTHORS   Rousset,R., Fabre,S., Desbois,C., Bantignies,F. and Jalinot,P.
+  TITLE     The C-terminus of the HTLV-1 Tax oncoprotein mediates interaction
+            with the PDZ domain of cellular proteins
+  JOURNAL   Oncogene 16 (5), 643-654 (1998)
+   PUBMED   9482110
+COMMENT     VALIDATED REFSEQ: This record has undergone validation or
+            preliminary review. The reference sequence was derived from
+            AF028823.2, CB129195.1, AF277318.1 and BM973411.1.
+            
+            Transcript Variant: This variant (2) lacks an alternate in-frame
+            exon in the 3' coding region, compared to variant 1, resulting in
+            an isoform (2) that is shorter than isoform 1.
+            
+            Publication Note:  This RefSeq record includes a subset of the
+            publications that are available for this gene. Please see the Gene
+            record to access additional publications.
+            
+            ##Evidence-Data-START##
+            Transcript exon combination :: CB129195.1, T34246.1 [ECO:0000332]
+            RNAseq introns              :: single sample supports all introns
+                                           ERS025098 [ECO:0000348]
+            ##Evidence-Data-END##
+            COMPLETENESS: complete on the 3' end.
+PRIMARY     REFSEQ_SPAN         PRIMARY_IDENTIFIER PRIMARY_SPAN        COMP
+            1-101               AF028823.2         4-104
+            102-272             CB129195.1         1-171
+            273-273             AF277318.1         146-146
+            274-556             CB129195.1         173-455
+            557-1278            AF277318.1         508-1229
+            1279-1320           BM973411.1         1-42                c
+FEATURES             Location/Qualifiers
+     source          1..1320
+                     /organism="Homo sapiens"
+                     /mol_type="mRNA"
+                     /db_xref="taxon:9606"
+                     /chromosome="17"
+                     /map="17p13"
+     gene            1..1320
+                     /gene="TAX1BP3"
+                     /gene_synonym="TIP-1"
+                     /note="Tax1 (human T-cell leukemia virus type I) binding
+                     protein 3"
+                     /db_xref="GeneID:30851"
+                     /db_xref="HGNC:30684"
+     exon            1..192
+                     /gene="TAX1BP3"
+                     /gene_synonym="TIP-1"
+                     /inference="alignment:Splign:1.39.8"
+                     /number=1
+     misc_feature    76..78
+                     /gene="TAX1BP3"
+                     /gene_synonym="TIP-1"
+                     /note="upstream in-frame stop codon"
+     CDS             154..450
+                     /gene="TAX1BP3"
+                     /gene_synonym="TIP-1"
+                     /note="isoform 2 is encoded by transcript variant 2; Tax
+                     interaction protein 1; tax1-binding protein 3;
+                     glutaminase-interacting protein 3; tax-interacting protein
+                     1"
+                     /codon_start=1
+                     /product="tax1-binding protein 3 isoform 2"
+                     /protein_id="NP_001191627.1"
+                     /db_xref="GI:325296954"
+                     /db_xref="GeneID:30851"
+                     /db_xref="HGNC:30684"
+                     /translation="MSYIPGQPVTAVVQRVEIHKLRQGENLILGFSIGGGIDQDPSQN
+                     PFSEDKTDKVNGWDMTMVTHDQARKRLTKRSEEVVRLLVTRQSLQKAVQQSMLS"
+     exon            193..312
+                     /gene="TAX1BP3"
+                     /gene_synonym="TIP-1"
+                     /inference="alignment:Splign:1.39.8"
+                     /number=2
+     exon            313..1305
+                     /gene="TAX1BP3"
+                     /gene_synonym="TIP-1"
+                     /inference="alignment:Splign:1.39.8"
+                     /number=4
+     STS             1142..1302
+                     /gene="TAX1BP3"
+                     /gene_synonym="TIP-1"
+                     /standard_name="A008L05"
+                     /db_xref="UniSTS:42768"
+     STS             1165..1296
+                     /gene="TAX1BP3"
+                     /gene_synonym="TIP-1"
+                     /standard_name="D15S1258"
+                     /db_xref="UniSTS:26100"
+ORIGIN      
+        1 ggcgctccgg ccagtgattg gctggaggtt tgttaactat tcatgagggg gcgggccgag
+       61 cggggcggcc tttgttaagc agcgagggcg cgaccgcggg tactctgctg ccggcttctc
+      121 ggagcggcgc tgggcgacca gagcagggtc gagatgtcct acatcccggg ccagccggtc
+      181 accgccgtgg tgcaaagagt tgaaattcac aagctgcgtc aaggtgagaa cttaatcctg
+      241 ggtttcagca ttggaggtgg aatcgaccag gatccttccc agaatccctt ctctgaagac
+      301 aagacggaca aggtgaacgg ctgggacatg accatggtca cacacgacca ggcccgcaag
+      361 cggctcacca agcgctcgga ggaggtggtg cgtctgctgg tgacgcggca gtcgctgcag
+      421 aaggccgtgc agcagtccat gctgtcctag cagccaccac catctgcgac tcctgcctgc
+      481 cgcctctctg tacagtaacg ccacttccac actctgtccc catctggctt ctgctgaccg
+      541 ctgggcccca gctcagaagg gctatagctg gtcccagagg cctggcctgg ccttccttcc
+      601 cttctcccat ccctggcctg gggcctctgg gaccggcttt ctctcctgga caccgaggat
+      661 tggaaataag ggcctggagc tgagtagtag ccagtctgct gtgaccacag gctcaggtcc
+      721 gaccctgctg cttggccaca gcagtggctg ggcaagtggg aaccactatc tcttgggagc
+      781 ccccaaaagc tgggaaatgc tggaggaacc aggcctttcc cgcttttgcc tggctgcagg
+      841 gttcggctcc gcccctgccc cccagccctc gtgtgtccac accgcagtgc ctctgcccct
+      901 cgggggactg gacacacatc ctgccagagg cgctacgaag ctttgcccag atgaagccag
+      961 gtgggctccg cgttcactcc cactctcccg aggggtgctg gcctccccag ggtttgcctt
+     1021 cttacggatt tagacgaggt tcgaggctca cctatcaggg cagctctcag gattgtcatt
+     1081 ttcctctttg cctgtgggtt taacttttgt atttttttaa tcacaagttt gatacaaaat
+     1141 gtttttatcg tactctttgg agatgcccat tctacttttg aatttagctt ttactaattc
+     1201 gcatctggaa gctcagcaag tgcacaagcc ttactttggt taccgtggaa accactgccg
+     1261 cccctccccg atgtggtgcg ctcaataaaa atgctggaat tcacaaaaaa aaaaaaaaaa
+//
