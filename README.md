@@ -4,16 +4,16 @@ A partial breakdown of the content covered in my BioPerl course at Johns Hopkins
 
 Content breakdown:
 
-Week_01: UNIX Review
-Week_02: Shell Programming and XP/TDD methodologies
-Week_03: Perl Review (e.g., RegEx, Functions, etc.)
-Week_04: Perl Review (e.g., Modules, References, etc.)
-Week_05: Perl Web Programming
-Week_06: Perl SQL and DBI modules
-Week_07: Perl SQL detailed
-Week_08: Review of Week_01-Week_07
-Week_09: OOP Perl
-Week_10: BioPerl Basic
-Week_11: BioPerl Intermediate
-Week_12: BioPerl Advanced
-Week_13: Review of  Week_09-Week_12
+Week_01: UNIX Review <br>
+Week_02: Shell Programming and XP/TDD methodologies<br>
+Week_03: Perl Review (e.g., RegEx, Functions, etc.)<br>
+Week_04: Perl Review (e.g., Modules, References, etc.)<br>
+Week_05: Perl Web Programming<br>
+Week_06: Perl SQL and DBI modules<br>
+Week_07: Perl SQL detailed<br>
+Week_08: Review of Week_01-Week_07<br>
+Week_09: OOP Perl<br>
+Week_10: BioPerl Basic<br>
+Week_11: BioPerl Intermediate<br>
+Week_12: BioPerl Advanced<br>
+Week_13: Review of  Week_09-Week_12<br>
